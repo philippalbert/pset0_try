@@ -20,6 +20,18 @@ def optimized_fibonacci(f):
     assert isinstance(f, int), f'{f} is not an integer'
     assert f >= 0, f'{f} should be greater than or equal to 0'
 
+    # in case f is smaller 2 we just return f
+    if f < 2:
+        return f
+
+    # create start variables
+    s1, s2 = 0, 1
+    for i in range(2, f):
+
+        s1, s2 = s2, s1+s2
+
+    return s1+s2
+
 
 
 
