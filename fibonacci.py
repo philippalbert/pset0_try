@@ -14,10 +14,12 @@ def last_8(some_int):
 def optimized_fibonacci(f):
     """Calculate fibonacci sequence
 
-    :param f:
-    :return:
+    :param int f: index of fth sequence number
+    :return int f: value of fth sequence number
     """
-    raise NotImplementedError()
+    assert isinstance(f, int) , f'{f} is not an integer'
+
+
 
 
 class SummableSequence(object):
