@@ -17,7 +17,8 @@ def optimized_fibonacci(f):
     :param int f: index of fth sequence number
     :return int f: value of fth sequence number
     """
-    assert isinstance(f, int) , f'{f} is not an integer'
+    assert isinstance(f, int), f'{f} is not an integer'
+    assert f >= 0, f'{f} should be greater than or equal to 0'
 
 
 
