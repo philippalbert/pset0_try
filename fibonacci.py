@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+from warnings import warn
 
 def last_8(some_int):
     """Return the last 8 digits of an int
@@ -7,8 +7,14 @@ def last_8(some_int):
     :param int some_int: the number
     :rtype: int
     """
+    # convert to string
+    s = str(some_int)[-8:]
 
-    raise int(str(some_int[-8:]))
+    if len(s) < 8:
+        warn(f'Integer has less than 8 digits. However last {len(s)} digits will '
+             f'be returned')
+
+    return int(s)
 
 
 def optimized_fibonacci(f):
